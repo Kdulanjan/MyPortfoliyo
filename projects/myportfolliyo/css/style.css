@@ -165,3 +165,23 @@ button:hover{
 	border: 2px solid forestgreen;
 	cursor: pointer;
 }
+.service{
+	background: #101010;
+	width: 100%;
+	padding: 100px 0px;
+}
+.title h2{
+	color: white;
+	font-size: 75px;
+	width: 1130px;
+	margin: 30px auto;
+	text-align: center;
+}
+.pra p{
+	color: #fcfc;
+	font-size: 22px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 20px;
+	letter-spacing: 1px;
+}
