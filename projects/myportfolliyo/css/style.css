@@ -198,7 +198,7 @@ button:hover{
 	height: 200px;
 	width: 300px;
 	padding: 10px 35px;
-	background: darkslategrey;
+	background: lightslategrey;
 	border-radius: 20px;
 	margin: 15px;
 	position: relative;
@@ -241,7 +241,7 @@ button:hover{
 
 
 .container{
-	background-color: black;
+
 	max-width:152px;
 	padding:0 15px;
 	margin:0 auto;
@@ -272,14 +272,12 @@ button:hover{
 }
 
 section.services .card-wrapper{
-
+	color: white;
 	display:grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-column-gap:2rem;
 	grid-row-gap:1rem;
 }
-
-
 
 
 
