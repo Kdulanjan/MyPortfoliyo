@@ -27,6 +27,7 @@ nav{
 	letter-spacing: 1px;
 	cursor: pointer;
 }
+
 span{
 	color: lawngreen;
 }
@@ -224,7 +225,7 @@ button:hover{
 .section-heading{
 	color:lawngreen;
 	text-align: center;
-	margin-bottom:2rem;
+	margin: 50px;
 	line-height: 0.5;
 }
 .section-heading span{
@@ -278,7 +279,112 @@ section.services .card-wrapper{
 	grid-column-gap:2rem;
 	grid-row-gap:1rem;
 }
+.logo2{
+	font-size: 40px;
+	color:white;
+	text-align: center;
+	margin: 10px;
+	line-height: 0.5;
+}
+
+.port{
+	width: 100%;
+	padding: 100px 0px;
+	background-color: #191919;
+}
+.port p{
+	color: #fcfc;
+	font-size: 18px;
+	margin-top: 2px;
+	text-align: center;
+	line-height: 20px;
+	letter-spacing: 1px;
 
 
+}
+
+.clip{
+	width: 1000px;
+	height: 600px;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 20px;
+	margin: auto;
+	display: grid;
+	/*border: 2px solid red;*/
+	grid-template-rows: repeat(3,1fr);
+	grid-template-columns: repeat(3,1fr);
+	gap: 9px;
+}
+.clip>div{
+	/*border: 2px solid red;*/
+	box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.68);
+}
+.clip>div:nth-child(1){
+
+	background:url("../images/3.png");
+	background-size: contain;
+	background-position: center;
+}
+
+.clip>div:nth-child(2){
+	background:url("../images/3.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.clip>div:nth-child(3){
+
+	background:url("../images/3.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.clip>div:nth-child(4){
+	background:url("../images/3.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.clip>div:nth-child(5){
+	background:url("../images/3.png");
+	background-size: cover;
+	background-position: center;
+}
+.clip>div:nth-child(6){
+	background:url("../images/3.png");
+	background-size: cover;
+	background-position: center;
+}
 
 
+.navbar ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
+}
+.navbar li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  5px;
+}
+.navbar a{
+	text-decoration: none;
+	color: white;
+	width: 100px;
+	display: block;
+	padding: 25px 10px;
+	font-size: 15px;
+	text-transform: lowercase;
+	text-align: center;
+}
+.navbar a:hover{
+	color: red;
+	transition: .4s;
+}
+.navbar ul li .active{
+	color: green;
+}
