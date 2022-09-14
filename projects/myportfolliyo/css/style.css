@@ -204,6 +204,11 @@ button:hover{
 	overflow: hidden;
 	text-align: center;
 }
+
+.box i{
+	color: #0c4128;
+	font-size: 50px;
+}
 .box h3{
 	font-size: 24px;
 	font-weight: 600;
@@ -223,8 +228,9 @@ button:hover{
 .section-heading{
 	color:lawngreen;
 	text-align: center;
-	margin: 50px;
+	margin: 10px;
 	line-height: 0.5;
+	font-size: 40px;
 }
 .section-heading span{
 	color:white;
@@ -388,7 +394,7 @@ section.services .card-wrapper{
 }
 
 .contact{
-
+background-size: cover;
 	width: 100%;
 	padding: 100px 0px;
 	background-color: black;
@@ -398,12 +404,15 @@ section.contact .card-wrapper{
 	grid-template-columns: repeat(3,1fr);
 	grid-gap:3rem;
 }
+
 section.contact .card-wrapper .card{
 	text-align: center;
 }
-section.contact .card-wrapper .card img{
-	margin-bottom: 3rem;
+section.contact .card-wrapper .card i{
+
 	margin-top: 50px;
+	color: green;
+	font-size: 30px;
 }
 section.contact .card-wrapper .card h1{
 	font-weight:400;
@@ -412,10 +421,12 @@ section.contact .card-wrapper .card h1{
 }
 section.contact .card-wrapper .card h6{
 	font-size:1rem;
-	color:red;
+	color: #fcfc;
 	font-weight:400;
 	margin-bottom:4rem;
 }
+
+
 
 section.contact .input-wrap{
 	display:grid;
@@ -439,9 +450,14 @@ section.contact .input-wrap-2 textarea{
 	padding:0.5rem;
 	border:1px solid cornsilk;
 	font-size: 0.9rem;
+
 }
 section.contact .input-wrap-2 textarea:focus, section.contact input:focus{
 	outline:none;
+}
+section.contact .btn-wrapper{
+	text-align: center;
+	margin-top:2rem;
 }
 section.contact .btn-wrapper{
 	text-align: center;
