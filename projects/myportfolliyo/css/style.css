@@ -3,6 +3,7 @@
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 .start{
 	height: 100vh;
@@ -13,6 +14,26 @@
 	background-position: center;
 
 }
+
+.navbar{
+	display: flex;
+
+
+}
+.navbar a{
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px 25px;
+	margin: 0 2px;
+	border-radius: 0.5rem;
+	transition: all .40s ease;
+}
+
+
+header{
+	position: fixed;
+}
+
 nav{
 	display: flex;
 	align-items: center;
@@ -46,6 +67,7 @@ nav ul li a{
 nav ul li a:hover{
 	color: red;
 	transition: .4s;
+
 }
 .btn{
 	background-color:green;
