@@ -267,6 +267,101 @@ button:hover{
 
 }
 
+.skills{
+	width: 100%;
+	padding: 100px 0px;
+	background-color: #101010;
+}
+.skills-head{
+	color:lawngreen;
+	text-align: center;
+	margin: 5px;
+	line-height: 0.5;
+	font-size: 40px;
+}
+
+.skills-head2{
+	color:white;
+	text-align: center;
+	margin: 20px;
+	line-height: 0.5;
+	font-size: 40px;
+}
+
+.clipLanguage{
+	width: 400px;
+	height: 400px;
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 150px;
+	margin: auto;
+	display: grid;
+	grid-template-rows: repeat(3,1fr);
+	grid-template-columns: repeat(3,1fr);
+	gap: 9px;
+}
+
+.clipLanguage>div{
+	/*border: 2px solid red;*/
+	box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.68);
+}
+.clipLanguage>div:nth-child(1){
+
+	background:url("../images/css.png");
+	background-size: contain;
+	background-position: center;
+}
+.clipLanguage>div:nth-child(2){
+
+	background:url("../images/java.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.clipLanguage>div:nth-child(3){
+	background:url("../images/html.png");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.clipLanguage>div:nth-child(4){
+	background:url("../images/javafx.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.clipLanguage>div:nth-child(5){
+	background:url("../images/Javascript.png");
+	background-size: cover;
+	background-position: center;
+}
+.clipLanguage>div:nth-child(6){
+	background:url("../images/mysql.png");
+	background-size: cover;
+	background-position: center;
+}
+
+.Stages{
+	color: white;
+	padding: 8px;
+	border-radius: 8px;
+	margin-left: 56px;
+	margin-top: 22px;
+	margin-bottom: 0;
+	font-size: 36px;
+}
+.Place{
+	color: red;
+	padding: 8px;
+	border-radius: 8px;
+	margin-left: 56px;
+	margin-top: 22px;
+	margin-bottom: 0;
+	font-size: 20px;
+}
+
 
 .container{
 
