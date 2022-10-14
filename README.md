@@ -19,9 +19,9 @@ _This site is a home page for my portfolio. It will show previous work history, 
 
 
 ## Reference Links
-_SiteMap url_   -  https://www.gloomaps.com/faQKqJEqEQ
+_SiteMap url_   -  https://www.gloomaps.com/KsCzr3vRJ3
 
 _Mockup url_    - https://www.figma.com/file/tjOPwmD8naxCnyJd8wVHul/Untitled?node-id=0%3A1
 
-_Wireframe url_ -  https://www.gloomaps.com/KsCzr3vRJ3
+_Wireframe url_ -  https://wireframe.cc/pro/pp/c121542f7566472
 
