@@ -23,6 +23,6 @@ _SiteMap url_   -  https://www.gloomaps.com/faQKqJEqEQ
 
 _Mockup url_    - https://www.figma.com/file/tjOPwmD8naxCnyJd8wVHul/Untitled?node-id=0%3A1
 
-_Wireframe url_ -  
+_Wireframe url_ -  free tril ended not working
 
 
