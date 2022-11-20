@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="StyleBox.css">
+
+</head>
+<body>
+<div class="clip">
+    <div></div>
+    </div>
+<div>
+    <input type="button" name="start" value="Start">
+    <input type="button" name="end" value="End">
+</div>
+
+
+
+<script>
+    var colours=['pink','blue','gray','red','yellow'];
+    var count=0;
+    function setColours(){
+        $("clip").css('background',colours[count]);
+        count++;
+        if (count==5){
+            count=0;
+        }
+
+    }
+    setInterval(testingOne,10);
+    setTimeout(testingOne,1000);
+
+    function testingOne(){
+        console.log("testing one method invoked")
+    }
+</script>
+
+</body>
+</html>
