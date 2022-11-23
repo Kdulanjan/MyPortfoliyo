@@ -6,13 +6,23 @@
     <link rel="stylesheet" href="../assents/style/bootstrap.min.css">
     <style>
         #container{
-
+                display: flex;
+        }
+        #container>div{
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        #container>div>h1{
+            font-size: 30px;
+            padding: 30px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    
+
 <section class="container-fluid">
     <div class="row">
         <div class="col-md-5"></div>
@@ -24,26 +34,57 @@
 
             <div class="mb-3">
                 <label class="form-label">Colour</label>
-                <input type="text" class="form-control" id="txtColour">
+                <input type="color" class="form-control" id="txtColor">
             </div>
 
-        <button type="submit" class="btn btn-primary">Add to QUE</button>
+        <button type="button"id="btnQUE" class="btn btn-primary">Add to QUE</button>
         </form>
     </div>
-
+</section>
+<main class="container-fluid">
+    <section id="container" class="mt-5">
 
 </section>
-<section id="container">
+</main>
 
 
 
-</section>
+
+
 
 
 
 <script src="../assents/js/bootstrap.min.js"></script>
 <script src="../assents/js/jquery-3.6.1.min.js"></script>
 <script>
+    var cueDate={
+        persons:[
+
+            {name:"kalana",color:"red"},
+            {name:"dulan",color:"blue"},
+            {name:"hettirachchi",color:"yellow"}
+        ],
+    nextPerson:function (){
+            var lastPerson= this.persons.pop();
+            this.persons.unshift(lastPerson);
+    }
+    }
+    renderDivs();
+    function renderDivs(){
+        $("#container").empty();
+        for(let i = 0; i < cueDate.persons.length;i++){
+            $("#container").append(`<div style="background-color: ${cueDate.persons[i].color}"><h1>${cueDate.persons[i].name}</h1></div>`);
+        }
+        cueDate.nextPerson();
+    }
+    setInterval(renderDivs,500);
+
+    $("#btnQUE").click(function (){
+        let inputname = $("#txtName").val();
+        let selecttedcolor = $("#txtColor").val();
+        var person={name:inputname,color:selecttedcolor}
+        cueDate.persons.unshift(person);
+    });
 
 </script>
 </body>
