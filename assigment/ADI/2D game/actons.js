@@ -1,6 +1,9 @@
+var Robo= document.getElementById("Robo");
+
+
 
 // -----------------------------Breath Animation----------------------------
-var Robo= document.getElementById("Robo");
+
 CharecterImageNumber = 0 ;
 AnimationNumber = 0 ;
 
@@ -51,3 +54,17 @@ function RunAnimation(){
 function idleDeadAnimationStart(){
     DeadAnimationNumber = setInterval(RunAnimation,100);
 }
+
+
+
+
+// ---------------------------------------
+window.addEventListener('keydown',(event) =>{
+switch (event.key){
+    case 'd':
+        console.log('')
+        idleRunAnimationStart.velocityX=1
+
+        break
+}
+})

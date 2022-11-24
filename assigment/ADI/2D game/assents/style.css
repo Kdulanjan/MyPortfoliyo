@@ -3,14 +3,10 @@
 }
 
 .background{
-    width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-image: url("backgrounds/vecteezy_space-alien-planet-landscape-with-rocks-and-plasma_13224310.jpg");
+background-color: black;
+}
 
-}
-.Robo{
-    height: 250px;
-    margin-top: 500px;
-    position: absolute;
-}
+
+
+
+
