@@ -7,7 +7,7 @@ canvas.height=800;
 canvas.width=800;
 
 const background =new Image();
-background.src= "assents/space.jpg";
+background.src= "assents/space.png";
 
 const enemyController=new EnemyController(canvas);
 

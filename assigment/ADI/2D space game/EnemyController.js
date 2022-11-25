@@ -1,3 +1,4 @@
+import Enemy from "./Enemy.js";
 export default class EnemyController {
 
 
@@ -15,12 +16,23 @@ export default class EnemyController {
 
     constructor(canvas) {
         this.canvas = canvas;
-        this.createnemies;
+        this.createEnemies();
     }
 
-    draw(ctx) {}
-    createnemies() {
-        this.enemyMap.forEach((row, rowIndex) => {
+    draw(ctx) {
+        this.drawEnemies(ctx)
+    }
+
+
+    drawEnemies(ctx) {
+        this.enemyRows.flat().forEach((enemy) => {
+                enemy.draw(ctx);
+            }
+        )
+    }
+
+    createEnemies() {
+        this.enemymap.forEach((row, rowIndex) => {
             this.enemyRows[rowIndex] = [];
             row.forEach((enemyNubmer, enemyIndex) => {
                 if (enemyNubmer > 0) {
@@ -31,3 +43,4 @@ export default class EnemyController {
             });
         });
     }
+}
