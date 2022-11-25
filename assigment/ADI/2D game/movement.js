@@ -7,8 +7,9 @@ canvas.height=600
 const gravity=0.5
 
 // ___________________________________gravity-------------------------------------------
-class Player{
-    constructor(position) {
+class Player extends Running{
+    constructor(position,imagSrc) {
+        super({imagSrc})
         this.position = position
         this.velocity ={
             x:0,
@@ -18,10 +19,7 @@ class Player{
         this.height = 100;
     }
 
-    draw(){
-    c.fillStyle = 'red'
-    c.fillRect(this.position.x,this.position.y,100,this.height)
-}
+
 update(){
         this.draw()
 
@@ -35,8 +33,9 @@ update(){
 
 }
 const player = new Player({
-    x:0,
+    x:500,
     y:0,
+    imagsrc:'./assents/character/idle.png'
 })
 
 const  keys={
