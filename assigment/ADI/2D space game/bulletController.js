@@ -16,6 +16,9 @@ constructor(canvas,maxBulletTime,colour,soundEnabled) {
 
 }
 draw(ctx){
+    
+
+    this.bullets.forEach((bullet) => bullet.draw(ctx));
     if(this.nextbulletTime>0){
         this.nextbulletTime--;
     }
