@@ -20,7 +20,7 @@ export default class EnemyController {
     yVelocity = 0;
     defaultXVelocity =1;
     defaultYVelocity =1;
-MoveDownTimerDefault=20;
+MoveDownTimerDefault=10;
 moveDownTimer =this.MoveDownTimerDefault
 
 
