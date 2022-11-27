@@ -30,6 +30,9 @@ fireBullettime=this.fireBulletTimerDefault;
         this.canvas = canvas;
         this.enemybulletController=enemybulletController;
         this.playerBulletController=playerBulletController;
+
+        this.enemySound =new Audio('sounds/enemy-death.wav');
+        this.enemySound.volume=0.5;
         this.createEnemies();
     }
 
@@ -45,7 +48,9 @@ fireBullettime=this.fireBulletTimerDefault;
         this.enemyRows.forEach(enemyRow=>{
             enemyRow.forEach((enemy,enemyIndex)=>{
                 if(this.playerBulletController.cellwith(enemy)){
-                  enemyRow.splice(enemyIndex, 1);
+                  this.enemySound.currentTime=0;
+                    this.enemySound.play();
+                    enemyRow.splice(enemyIndex, 1);
                 }
             })
         })
