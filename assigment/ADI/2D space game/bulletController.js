@@ -17,13 +17,25 @@ constructor(canvas,maxBulletTime,colour,soundEnabled) {
 }
 draw(ctx){
     this.bullets =this.bullets.filter(bullet=>bullet.y + bullet.width>0 && bullet.y <=this.canvas.height)
-console.log(this.bullets.length);
+                console.log(this.bullets.length);
 
-    this.bullets.forEach((bullet) => bullet.draw(ctx));
-    if(this.nextbulletTime>0){
-        this.nextbulletTime--;
+            this.bullets.forEach((bullet) => bullet.draw(ctx));
+                if(this.nextbulletTime>0){
+                        this.nextbulletTime--;
     }
 }
+    cellwith(sprite) {
+        const bullethitSpriteIndex = this.bullets.findIndex((bullet) => bullet.cellwith(sprite));
+
+        if (bullethitSpriteIndex >=0) {
+            this.bullets.splice(bullethitSpriteIndex, 1);
+        return true;
+        }
+        return false;
+    }
+
+
+
         shoot(x,y,velocity,nextbulletTime =0){
                 if(
                     this.nextbulletTime <= 0 && this.bullets.length < this.maxBulletTime){

@@ -13,8 +13,8 @@ background.src= "assents/space.png";
 
 const playerBulletController = new bulletController(canvas,10,"red",true);
 const enemyBulletController = new bulletController(canvas,7,"pink",false);
-const enemyController=new EnemyController(canvas,enemyBulletController);
-const player = new Player(canvas, 3,playerBulletController)
+const enemyController=new EnemyController(canvas,enemyBulletController,playerBulletController);
+const player = new Player(canvas, 3,playerBulletController);
 
 function game(){
     ctx.drawImage(background,0,0, canvas.width, canvas.height);
