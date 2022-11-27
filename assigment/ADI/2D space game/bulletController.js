@@ -16,7 +16,8 @@ constructor(canvas,maxBulletTime,colour,soundEnabled) {
 
 }
 draw(ctx){
-    
+    this.bullets =this.bullets.filter(bullet=>bullet.y + bullet.width>0 && bullet.y <=this.canvas.height)
+console.log(this.bullets.length);
 
     this.bullets.forEach((bullet) => bullet.draw(ctx));
     if(this.nextbulletTime>0){

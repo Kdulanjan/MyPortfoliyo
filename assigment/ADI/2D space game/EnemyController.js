@@ -5,12 +5,12 @@ export default class EnemyController {
 
 
     enemymap = [
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-        [2, 3, 3, 2, 2, 3, 3, 2, 2, 3, 3, 2, 2, 1],
-        [2, 3, 3, 2, 2, 3, 3, 2, 2, 3, 3, 2, 2, 1],
-        [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+        [2, 3, 3, 2, 2, 3, 3, 2, 2, 3],
+        [2, 3, 3, 2, 2, 3, 3, 2, 2, 3],
+        [3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
     ];
 
     enemyRows = [];
@@ -21,11 +21,14 @@ export default class EnemyController {
     defaultXVelocity =1;
     defaultYVelocity =1;
 MoveDownTimerDefault=10;
-moveDownTimer =this.MoveDownTimerDefault
+moveDownTimer =this.MoveDownTimerDefault;
+fireBulletTimerDefault = 100;
+fireBullettime=this.fireBulletTimerDefault;
 
 
-    constructor(canvas) {
+    constructor(canvas,enemybulletController) {
         this.canvas = canvas;
+        this.enemybulletController=enemybulletController;
         this.createEnemies();
     }
 
@@ -34,6 +37,19 @@ moveDownTimer =this.MoveDownTimerDefault
         this.updateVelocityAndDirection();
         this.drawEnemies(ctx);
         this.resetMoveDownTimer();
+        this.fireBullet();
+    }
+
+    fireBullet() {
+        this.fireBullettime--;
+        if (this.fireBullettime <= 0) {
+            this.fireBullettime = this.fireBulletTimerDefault;
+            const allEnemies = this.enemyRows.flat();
+            const enemyIndex = Math.floor(Math.random() * allEnemies.length);
+            const enemy = allEnemies[enemyIndex];
+            this.enemybulletController.shoot(enemy.x, enemy.y, -2);
+            console.log(enemyIndex);
+        }
     }
 
 
